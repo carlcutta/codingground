@@ -18,7 +18,12 @@ connection.request("GET", url)
 response = connection.getresponse()
 data = response.read()
 connection.close()
-#print(data)
 if response.status != 200:
     print ("fail")
-json.loads(data)
+print(type(data))
+#need to convert bytes to string to decode using json -> test with #
+datadecode=data.decode('utf-8')
+#print(datadecode)
+json.loads(datadecode)
+#
+#
