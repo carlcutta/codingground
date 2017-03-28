@@ -20,10 +20,8 @@ data = response.read()
 connection.close()
 if response.status != 200:
     print ("fail")
-print(type(data))
+#print(type(data))
 #need to convert bytes to string to decode using json -> test with #
 datadecode=data.decode('utf-8')
 #print(datadecode)
-json.loads(datadecode)
-#
-#
+jsonobj=json.loads(datadecode)
