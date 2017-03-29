@@ -1,1 +1,0 @@
-execute booli-query.py
